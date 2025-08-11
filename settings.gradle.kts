@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "video-layer-architecture-demo"
 include(":app")
 include(":VideoLayerSDK")
+include(":VideoLayerSDKByCompose")
+

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.videolayer.sdk.data.VideoItem
 import com.videolayer.sdk.layer.VideoButtonLayer
+import com.videolayer.sdk.layer.VideoGestureLayer
 import com.videolayer.sdk.layer.VideoInfoLayer
 
 /**
@@ -26,6 +27,7 @@ class VideoPageAdapter : ListAdapter<VideoItem, VideoPageAdapter.VideoViewHolder
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
         )
+        host.addLayer(VideoGestureLayer())
         host.addLayer(VideoInfoLayer()) // 默认添加一个信息图层
         host.addLayer(VideoButtonLayer())
         return VideoViewHolder(host)
